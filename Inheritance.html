@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <script>
+        function Vehicle(x, y) {
+            this.x = x;
+            this.y = y;
+            document.getElementById("x").innerHTML = this.x;
+            document.getElementById("y").innerHTML = this.y;
+        }
+        function Car(x, y, z) {
+            Vehicle.call(this, x, y);
+            this.z = z;
+            document.getElementById("z").innerHTML = this.z;
+        }
+        function gen() {
+            Car.prototype = new Car("335i","BMW","Black"); 
+        }
+    </script>
+</head>
+
+<body>
+    
+    <p>Display car's model, company and color:</p>
+    <button onclick="gen()">Display</button>
+    <br><br>
+    Car's model is: <b id="y"> </b><b id="x"></b>
+    <br>
+    Car's color is: <b id="z"></b>
+
+
+</body>
+
+</html>

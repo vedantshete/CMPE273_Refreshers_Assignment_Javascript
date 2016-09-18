@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript" src="Variables.js"></script>
+<title>Converter</title>
+</head>
+
+<body>
+<p><b>Converter for the newly arrived Indians in USA!</b></p>
+
+Enter your speed in mph:<input type="text" id="m"><br><br>
+<button onclick=convtime()>Click to know your speed in kmph</button><br><br>
+
+Enter currency in $:<input type="text" id="c"><br><br>
+<button onclick=convcurr()>Click to convert currency to INR</button>
+
+<script>
+function convtime(){
+var mph= document.getElementById('m').value;
+var kmph = mph*1.6;
+alert("kmph: "+ kmph);
+}
+
+function convcurr(){
+	var dollar= document.getElementById('c').value;
+	var inr= dollar*65;
+	alert("INR: "+inr);
+	
+}
+</script>
+</body>
+</html>

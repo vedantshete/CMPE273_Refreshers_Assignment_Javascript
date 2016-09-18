@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Where are you right now?</title>
+    <script>
+
+function mylocation(){
+	if(navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(pos, err);
+	}else {
+		document.getElementById("disp").innerHTML="Not supported.";
+	}
+}
+
+function pos(x){
+document.getElementById("disp").innerHTML = "Latitude = "+x.coords.latitude+"<br>Longitude = "+x.coords.longitude+"<br>Altitude = "+x.coords.altitude;
+}
+
+function err(y){
+	switch(y.code)
+	{
+	case y.PERMISSION_DENIED:document.getElementById("disp").innerHTML.innerHTML = "User denied the request for Geolocation."
+        break;
+    case y.POSITION_UNAVAILABLE:document.getElementById("disp").innerHTML.innerHTML = "Location information is unavailable."
+        break;
+    case y.TIMEOUT:document.getElementById("disp").innerHTML.innerHTML = "The request to get user location timed out."
+        break;
+    case y.UNKNOWN_ERROR:document.getElementById("disp").innerHTML.innerHTML = "An unknown error occurred."
+        break;
+	}
+	
+	}
+</script>
+</head>
+<body>
+<h1>Find out where are you right now?</h1>
+<button onclick="mylocation()">Find me!</button>
+<br><br>
+<p id="disp"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>What is you lucky color today?</title>
+</head>
+
+<body>
+<p><b>What's your lucky color today?</b></p>
+<button onclick=color()>Click to know your lucky color!</button>
+<p id="col"></p>
+
+<script>
+function color(){
+	var lucky=["Red","Orange","Blue","Green","Black","Grey","Purple"];
+	
+	document.getElementById("col").innerHTML = "Your lucky color today is "+lucky[Math.round(Math.random()*(6-0)+0)]+".";
+}
+
+</script>
+</body>
+</html>

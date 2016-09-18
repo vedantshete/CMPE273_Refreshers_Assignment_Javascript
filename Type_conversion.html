@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert your details</title>
+</head>
+
+<body>
+<h2>Generate your Id number!</h2>
+Enter your year of birth:<input type="text" id="dob" /><br>
+<button onclick="funct()">Generate Id number</button>
+<p id="disp"></p>
+<script>
+function funct(){
+	var dbirth = document.getElementById('dob').value;
+	var d = new Date();
+	var z = d.getDate()+dbirth+d.getMinutes();
+	var p = Number(z);
+	document.getElementById('disp').innerHTML = "Your id number is "+p+".";
+}
+
+</script>
+
+</body>
+</html>

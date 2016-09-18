@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Zero to Hero</title>
+</head>
+<body>
+<h1>What happened with Roger!</h1>
+<br>
+<p id="disp">Roger is a zero!</p>
+<br>
+<button onclick=regex()>Roger worked hard</button>
+
+<script>
+function regex(){
+	var x = document.getElementById("disp").innerHTML;
+	var y = x.replace("zero","hero");
+	document.getElementById("disp").innerHTML= y;	
+}
+
+</script>
+
+</body>
+</html>

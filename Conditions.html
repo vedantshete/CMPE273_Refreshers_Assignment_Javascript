@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Body Mass Index Calculator</title>
+</head>
+
+<body>
+<h1>Body Mass Index Calculator</h1>
+Enter your height: <input type="text" id="ft" />Feet <input type="text" id="inc" />Inches<br><br>
+Enter your weight: <input type="text" id="pd" />Pounds
+<br><br>
+<button onclick="bmi()">Calculate BMI</button>
+
+<p id="disp"></p>
+
+<script>
+function bmi(){
+	var feet = document.getElementById('ft').value;
+	var inches = document.getElementById('inc').value;
+	var pds = document.getElementById('pd').value;
+	if(feet<0 || inches<0 || pds<0){
+		document.getElementById('disp').innerHTML="Please enter valid values!";
+	}
+
+	var b = Number(inches)+(feet*12);
+	var a = pds * 0.45;
+	var ht = b * 0.025;
+	var fin = a / (ht * ht);
+	
+	if(fin<18.5){
+		document.getElementById('disp').innerHTML="You are underweight!";
+	}else if(fin>=18.5 && fin<25){
+		document.getElementById('disp').innerHTML="You have normal weight!";
+	}else if(fin>=25 && fin<30){
+		document.getElementById('disp').innerHTML="You are overweight!";
+	}else{
+		document.getElementById('disp').innerHTML="You are obese!";
+	}
+}
+
+</script>
+
+</body>
+</html>

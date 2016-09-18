@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Medicine</title>
+<script>	
+var disease = '{"med":[{"medicine":"ABC","prob":"cold and cough" },{"medicine":"PQR","prob":"fever" },{"medicine":"XYZ","prob":"indigestion" }]}';
+var object = JSON.parse(disease);
+	function cc(){
+		document.getElementById("cc").innerHTML="Take medicine "+object.med[0].medicine+" for "+object.med[0].prob;
+	}
+	function fev(){	
+		document.getElementById("fev").innerHTML="Take medicine "+object.med[1].medicine+" for "+object.med[1].prob;
+	}
+	function ind(){
+		document.getElementById("ind").innerHTML="Take medicine "+object.med[2].medicine+" for "+object.med[2].prob;
+	}
+</script>
+</head>
+<body>
+<p>Choose your problem amongst the below options:</p>
+<button onclick="cc()">Click for medicines for cold and cough</button><br>
+<button onclick="fev()">Click for medicines for fever</button><br>
+<button onclick="ind()">Click for medicines for indigestion</button><br>
+<br><p id="cc"></p>
+<br><p id="fev"></p>
+<br><p id="ind"></p>
+
+</body>
+</html>

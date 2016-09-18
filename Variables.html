@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Speed converter</title>
+</head>
+
+<body>
+<p><b>Speed converter mph to kmph</b></p>
+Enter your speed in mph:<input type="text" id="m"><br><br>
+
+<button onclick="convtime()">Click to know your speed in kmph</button>
+
+<script>
+function convtime(){
+var mph= document.getElementById('m').value;
+var kmph = mph*1.6;
+alert("kmph:"+ kmph);
+}</script>
+</body>
+</html>

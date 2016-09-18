@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vote</title>
+</head>
+<body>
+<h2>Can you vote?</h2>
+<br>
+<p>Enter your age: </p>
+<input type="text" id="age" />
+<button onclick=vfunc()>Submit</button>
+<br><br>
+<p id="disp"></p><br>
+<p id="disp2"></p>
+<script>
+function vfunc(){
+	var x = document.getElementById('age').value;
+	
+	try{
+		if(x < 18) throw 18-x+" years more to vote."
+			}
+	catch(p){
+	   		document.getElementById('disp').innerHTML = "You have to wait  " + p;
+	}finally{
+		document.getElementById('disp2').innerHTML="Voting age in India is 18.";
+	}
+}
+
+</script>
+
+</body>
+</html>

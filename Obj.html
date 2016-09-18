@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>All about Ronaldo and Zlatan!</title>
+</head>
+<body>
+<h3>All about Ronaldo and Zlatan!</h3>
+<br><br>
+<p id="disp"></p><br><br>
+<p id="show"></p>
+<script>
+var ronaldo = {
+fname: "Cristiano",
+lname: "Ronaldo",
+club: "Real Madrid",
+country: "Portugal",
+sent : function(){
+return this.fname+" "+this.lname+" plays for "+this.country+" and "+this.club}
+};
+
+var zlatan = {
+fname: "Zlatan",
+lname: "Ibrahimovic",
+club: "Manchester United",
+country: "Sweden",
+sent : function(){
+return this.fname+" "+this.lname+" plays for "+this.country+" and "+this.club}
+};
+
+document.getElementById("disp").innerHTML= ronaldo.sent();
+document.getElementById("show").innerHTML= zlatan.sent();
+
+</script>
+
+
+</body>
+</html>
